@@ -23,7 +23,7 @@ import { logout } from '../../actions/auth';
     return (
         <nav className="navbar bg-dark">
             <h1>
-                <a href="index.html"><i className="fas fa-code"></i> DevConnector</a>
+                <a href="/"><i className="fas fa-code"></i> DevConnector</a>
             </h1>
             {!loading && <Fragment>{isAuthenticated?authLinks:guestLinks}</Fragment>}
         </nav>
