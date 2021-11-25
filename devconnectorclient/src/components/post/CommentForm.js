@@ -8,8 +8,8 @@ const CommentForm = ({addComment,postId}) => {
 
     return (
         <div className="post-form">
-        <div className="bg-primary p">
-          <h3>Leave a comment...</h3>
+        <div className="bg-primary p" >
+          <h3 style={{backgroundColor:"#17a2b8",color:"white"}}>Leave a comment...</h3>
         </div>
         <form className="form my-1" onSubmit={e=>{
             e.preventDefault();
@@ -17,6 +17,8 @@ const CommentForm = ({addComment,postId}) => {
             setText("");
         }}>
           <textarea
+          style={{width:"100%"}}
+          className="col-sm-12"
           value={text}
           onChange={e=>setText(e.target.value)}
             name="text"
@@ -25,7 +27,7 @@ const CommentForm = ({addComment,postId}) => {
             placeholder="Create a comment"
             required
           ></textarea>
-          <input type="submit" className="btn btn-dark my-1" value="Submit" />
+          <input type="submit" className="col-sm-3 btn btn-dark my-1" value="Submit" />
         </form>
       </div>
     )

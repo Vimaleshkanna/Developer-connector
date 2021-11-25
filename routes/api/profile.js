@@ -9,7 +9,7 @@ const config = require("config");
 const request = require("request");
 
 //get all profiles
-router.get("/",auth,async (req,res)=>{
+router.get("/",async (req,res)=>{
     try {
         const profile = await Profile.find().populate('user',['name','avatar']);
         res.json(profile);
@@ -101,7 +101,7 @@ router.post('/',
 })
 
 //get user profile by user id
-router.get('/user/:user_id',auth, async(req, res) => {
+router.get('/user/:user_id', async(req, res) => {
 try {
     const profile = await Profile.findOne({user:req.params.user_id}).populate('user',['name','avatar']);
     if(!profile){

@@ -17,7 +17,8 @@ import  Login  from '../auth/Login';
 
  const Routes=()=> {
     return (
-        <section className="container">
+        <div className="container">
+        
           <Alert/>
             <Switch>
             <Route exact path="/register" component={Register}/>
@@ -33,7 +34,7 @@ import  Login  from '../auth/Login';
             <PrivateRoute exact path="/posts/:id" component={Post}/>
             <Route component={NotFound}/>
             </Switch>
-          </section>
+          </div>
     )
 }
 export default Routes;

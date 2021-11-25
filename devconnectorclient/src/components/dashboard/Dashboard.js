@@ -13,9 +13,9 @@ const Dashboard = ({getCurrentProfile,deleteAccount,auth:{user},profile:{profile
         getCurrentProfile();
     },[getCurrentProfile]);
 
-    return loading && profile ===null ?<Spinner/>:<Fragment>
-        <h1 className="large text-primary">Dashboard</h1>
-        <p className="lead">
+    return loading && profile ===null ?<Spinner/>:<div className="row" >
+        <h1 className="large text-head" style={{marginBottom:"5px"}}>Dashboard</h1>
+        <p className="lead" style={{marginBottom:"5px"}}>
             <i className="fas fa-user"></i>Welcome {user && user.name}
         </p>
         {profile !==null ?(
@@ -24,7 +24,7 @@ const Dashboard = ({getCurrentProfile,deleteAccount,auth:{user},profile:{profile
                 <Experience experience={profile.experience}/>
                 <Education education={profile.education}/>
 
-                <div className="my-2">
+                <div className="my-2" style={{marginBottom:"5px"}}>
                     <button className="btn btn-danger" onClick={()=>deleteAccount()}>
                         <i className="fas fa-user-minus"></i>Delete My Account
                     </button>
@@ -35,7 +35,7 @@ const Dashboard = ({getCurrentProfile,deleteAccount,auth:{user},profile:{profile
                 <Link to="/create-profile" className="btn btn-primary my-1">Create Profile</Link>
                 </Fragment>
                 )}
-    </Fragment>
+    </div>
 }
 
 Dashboard.propTypes = {

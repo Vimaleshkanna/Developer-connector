@@ -10,8 +10,8 @@ const Posts = ({getPosts,post:{posts,loading}}) => {
     useEffect(()=>{
         getPosts();
     },[getPosts]);
-    return loading ? <Spinner/> :<Fragment>
-        <h1 className="large text-primary">Posts</h1>
+    return loading ? <Spinner/> :<div className="row">
+        <h1 className="large text-head">Posts</h1>
         <p className="lead"><i className="fas fa-user"></i>Welcome to community</p>
         <PostForm/>
         <div className="posts">
@@ -19,7 +19,7 @@ const Posts = ({getPosts,post:{posts,loading}}) => {
                 <PostItem key={post._id} post={post}/>
             ))}
         </div>
-    </Fragment>
+    </div>
 }
 
 Posts.propTypes = {

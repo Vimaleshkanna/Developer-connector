@@ -11,19 +11,28 @@ const Profiles = ({getProfiles,profile:{profiles,loading}}) => {
     },[getProfiles])
     return (
         <Fragment>
-            {loading ? <Spinner/> : <Fragment>
-                <h1 className="large text-primary">Developers</h1>
-                <p className="lead">
-                    <i className="fab fa-connectdevelop"></i>Browse and connect with Developers
-                </p>
-                <div className="profiles">
-                    {profiles.length>0 ? (
-                        profiles.map(profile =>(
-                            <ProfileItem key={profile._id} profile={profile}/>
-                        ))
-                    ):<h4>No Profiles Found</h4>}
+            {loading ? <Spinner/> :
+
+             
+                <div className="row">
+                    <div className="col-12">
+                        
+                        <h1 className="large text-primary">Developers</h1>
+                        <p className="lead">
+                            <i className="fab fa-connectdevelop"></i>Browse and connect with Developers
+                        </p>
+                        <div className="profiles">
+                            {profiles.length>0 ? (
+                                profiles.map(profile =>(
+                                    <ProfileItem key={profile._id} profile={profile}/>
+                                ))
+                            ):<h4>No Profiles Found</h4>}
+                        </div>
+                    </div>
+                   
                 </div>
-            </Fragment>}
+            
+            }
         </Fragment>
     )
 }

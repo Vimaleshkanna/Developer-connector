@@ -1,0 +1,151 @@
+/* Text Styles*/
+.x-large {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.large {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+h1 {
+  color: #17a2b8;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-dark {
+  color: var(--dark-color);
+}
+
+.dark-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Landing Page */
+.landing {
+  position: relative;
+  background: url("./img/showcase.jpg") no-repeat center center/cover;
+  height: 90vh;
+}
+
+.landing-inner {
+  color: #fff;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Navbar */
+/* .navbar {
+  opacity: 0.5;
+}
+.navbar:hover {
+  opacity: 0.8;
+} */
+/* li tag */
+li {
+  list-style-type: none;
+  display: inline;
+  padding: 5px;
+  float: right;
+}
+/* link styles */
+#Link {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+#Link:hover {
+  color: goldenrod;
+  text-decoration: none;
+}
+.login-form {
+  margin: 100px auto;
+}
+/* form */
+.wholeForm {
+  margin: 100px auto;
+}
+
+.reg-fg,
+.lg-fg,
+.ae-fg {
+  padding-bottom: 10px;
+}
+
+.ep-fg {
+  padding: 10px;
+  width: 100%;
+}
+/* card */
+.card {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* .card-rows {
+  margin: 5px;
+} */
+.row {
+  padding-top: 20px;
+}
+.profile-top {
+  color: white;
+}
+.profile-top,
+.profile-about {
+  margin-bottom: 10px;
+  border: 1px solid grey;
+}
+
+.profile-exp,
+.profile-edu {
+  border: 1px thin grey;
+}
+
+/* .profile-top,
+.profile-about,
+.profile-edu,
+.profile-exp {
+  font-family: Arial, Helvetica, sans-serif;
+} */
+
+.icons a {
+  text-decoration: none;
+  color: white;
+}
+
+.text-head {
+  color: #17a2b8;
+}
+
+.postcard {
+  color: #17a2b8;
+  padding-left: 80px;
+  text-decoration-line: none;
+}

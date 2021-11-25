@@ -22,38 +22,41 @@ const AddEducation = ({addEducation,history}) => {
     const onChange= e=>setFormData({...formData,[e.target.name]:e.target.value});
     return (
         <Fragment>
-            <h1 class="large text-primary">
+            <h1 className="large text-head">
             Add Your Education
             </h1>
-            <p class="lead">
-                <i class="fas fa-code-branch"></i> Add any school/bootcamp that you have attended
+            <p className="lead">
+                <i className="fas fa-code-branch"></i> Add any school/bootcamp that you have attended
             </p>
-            <small>* = required field</small>
-            <form class="form" onSubmit={e=>{
+            <small className="text-danger">* = required field</small>
+            <form className="form" onSubmit={e=>{
                 e.preventDefault();
                 addEducation(formData,history)
             }}>
-                <div class="form-group">
-                <input type="text" placeholder="* school or bootcamp" name="school" value={school} onChange={(e)=>onChange(e)} required />
+                <div className="form-floating ae-fg">
+                <input className="form-control" id="floatingInput" type="text" placeholder="* school or bootcamp" name="school" value={school} onChange={(e)=>onChange(e)} required />
+                <label for="floatingInput">* school or bootcamp </label>
                 </div>
-                <div class="form-group">
-                <input type="text" placeholder="* degree or certificate" name="degree" value={degree} onChange={(e)=>onChange(e)} required />
+                <div className="form-floating ae-fg">
+                <input className="form-control" id="floatingInput" type="text" placeholder="* degree or certificate" name="degree" value={degree} onChange={(e)=>onChange(e)} required />
+                <label for="floatingInput">* degree or certificate </label>
                 </div>
-                <div class="form-group">
-                <input type="text" placeholder="fieldofstudy" name="fieldofstudy" value={fieldofstudy} onChange={(e)=>onChange(e)}/>
+                <div className="form-floating ae-fg">
+                <input className="form-control" id="floatingInput" type="text" placeholder="fieldofstudy" name="fieldofstudy" value={fieldofstudy} onChange={(e)=>onChange(e)}/>
+                <label for="floatingInput">fieldofstudy </label>
                 </div>
-                <div class="form-group">
+                <div className="ae-fg">
                 <h4>From Date</h4>
-                <input type="date" name="from" value={from} onChange={(e)=>onChange(e)}/>
+                <input className="form-control" id="floatingInput" type="date" name="from" value={from} onChange={(e)=>onChange(e)}/>
                 </div>
-                <div class="form-group">
+                <div style={{padding:"10px"}}>
                 <p><input type="checkbox" name="current" value={current} checked={current} onChange={(e)=>{setFormData({...formData,current:!current}); toggleDisabled(!toDateDisabled)}} />{''} Current School</p>
                 </div>
-                <div class="form-group">
+                <div className="ae-fg">
                 <h4>To Date</h4>
-                <input type="date" name="to" value={to} onChange={(e)=>onChange(e)} disabled={toDateDisabled ? 'disabled' : ''}/>
+                <input className="form-control" id="floatingInput" type="date" name="to" value={to} onChange={(e)=>onChange(e)} disabled={toDateDisabled ? 'disabled' : ''}/>
                 </div>
-                <div class="form-group">
+                <div className="ae-fg">
                 <textarea
                     name="description"
                     cols="30"
@@ -62,8 +65,8 @@ const AddEducation = ({addEducation,history}) => {
                     value={description} onChange={(e)=>onChange(e)}
                 ></textarea>
                 </div>
-                <input type="submit" class="btn btn-primary my-1" />
-                <a class="btn btn-light my-1" href="dashboard.html">Go Back</a>
+                <input type="submit" className="btn btn-primary my-1" />
+                <a className="btn btn-light my-1" href="/dashboard">Go Back</a>
             </form>
         </Fragment>
     )
