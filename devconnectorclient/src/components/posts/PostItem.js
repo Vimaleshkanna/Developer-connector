@@ -10,7 +10,8 @@ const PostItem = ({auth,addLike,removeLike,deletePost,post:{_id,text,name,avatar
           <div className="container">
           <div className="row">
               <div  className="col-sm-12 col-md-6">
-                <Link style={{textDecoration:"none"}} to={`/profile/${user}`}>
+              <center>
+              <Link style={{textDecoration:"none"}} to={`/profile/${user}`}>
                   <img
                     className="rounded-circle"
                     src={avatar}
@@ -18,10 +19,13 @@ const PostItem = ({auth,addLike,removeLike,deletePost,post:{_id,text,name,avatar
                   />
                   <h4 className="postcard">{name}</h4>
                 </Link>
+              </center>
+                
               </div>
 
           
               <div className="col-sm-12 col-md-6">
+              <center>
                 <p className="my-1" style={{padding:"10px"}}>
                   {text}
                 </p>
@@ -51,7 +55,7 @@ const PostItem = ({auth,addLike,removeLike,deletePost,post:{_id,text,name,avatar
                     </button>
                 )}
                 </div>}
-                
+                </center>
                 
               </div>
             </div>
